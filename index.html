@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>E-index</h1>
+    <div class="indexcard">
+      <input
+        type="text"
+        id="nameandsurname"
+        onfocus="this.value=''"
+        placeholder="Name and Surname"
+      />
+      <input type="date" id="dateofbirth" onfocus="this.value=''" />
+      <input
+        type="number"
+        id="indexnumb"
+        onfocus="this.value=''"
+        placeholder="Index number"
+      />
+      <input
+        type="email"
+        id="email"
+        onfocus="this.value=''"
+        placeholder="Email adress"
+      />
+      <button id="enterbtn" type="submit">Enter</button>
+    </div>
+
+    <div id="studentcard"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
