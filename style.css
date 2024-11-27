@@ -30,3 +30,6 @@ h1{
 .stdcard h2,h3{
     margin-left: 5px;
 }
+#error{
+    text-align: center;
+}

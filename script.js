@@ -4,32 +4,29 @@ var emailInput = document.getElementById("email");
 var indexNumbInput = document.getElementById("indexnumb");
 var dateInput = document.getElementById("dateofbirth");
 
-// enterBtn.addEventListener("click", () =>{
-// console.log(nameInput.value)
-// console.log(emailInput.value)
-// console.log(indexNumbInput.value)
-// console.log(dateInput.value)
-//  document.getElementById('nameandsurname').value='';
-// document.getElementById('email').value='';
-// document.getElementById('indexnumb').value='';
-// document.getElementById('dateofbirth').value='';
-// })
-
-// var student1 = {
-//     studenName: nameInput.value,
-//     studentEmail: emailInput.value,
-//     studenDateOfBirth: dateInput.value,
-//     studentIndexNumber: indexNumbInput.value
-// }
-// console.log(student1)
 
 var studentsContainer = document.getElementById("studentcard");
+var errorLog = document.getElementById("error")
 students = [];
+
 enterBtn.addEventListener("click", () => {
-  // console.log(nameInput.value)
-  // console.log(emailInput.value)
-  // console.log(indexNumbInput.value)
-  // console.log(dateInput.value)
+  var student = {
+    studentName: nameInput.value,
+    studentEmail: emailInput.value,
+    studentDateOfBirth: dateInput.value,
+    studentIndexNumber: indexNumbInput.value,
+  };
+if(student.studentName == "" ||student.studentEmail == "" || student.studentDateOfBirth == "" || student.studentIndexNumber == "" ){
+document.getElementById("error").innerHTML +=`
+<div class="error">
+<h2>Error</h2>
+<img src="https://www.freeiconspng.com/uploads/orange-error-icon-0.png" width="200px"/>
+<h4>Empty fields - all fields need to be filled!</h4>
+</div>
+`
+}
+else{
+  document.getElementById("error").innerHTML = ""
   var student = {
     studentName: nameInput.value,
     studentEmail: emailInput.value,
@@ -69,7 +66,8 @@ enterBtn.addEventListener("click", () => {
        </div>
     
        `;
-  });
+});
+}
   document.getElementById("nameandsurname").value = "";
   document.getElementById("email").value = "";
   document.getElementById("indexnumb").value = "";
